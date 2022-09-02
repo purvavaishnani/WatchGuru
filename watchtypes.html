@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WatchGuru</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myBtn").click(function(){
+                $("#img1").animate({left: '700px'});
+                $("#content1").animate({right: '650px'});
+                $("#img2").animate({right: '700px'});
+                $("#content2").animate({left: '650px'});
+                $("#img3").animate({left: '700px'});
+                $("#content3").animate({right: '650px'});
+              });
+            });
+        </script>
+    </head>
+    <body style="background-color: #D3CCE3;">
+        <div id="container">
+            <div id="header" style="height: 150px;background-color: #3C3B3F;">
+                <div id="heading_div">
+                    <div style="width: 250px;float: left">
+                        <span style="font-size: 50px">WatchGuru</span><br>
+                        <i>"Everything About Wrist Watches"</i>
+                        <div id="line"></div>
+                    </div>
+                    <span id="pageHeader">DIFFERENT TYPES OF WRIST  WATCHES</span>
+                    <a href="menu.html" style="position: fixed;top: 5%;right: 4%;font-size: 40px;color:black;text-decoration: none;z-index: +11;" title="Close">&cross;</a>
+                </div>
+            </div>
+            <button id="myBtn" class="btn btn-warning" style="height: 50px;width: 100%;color: black">CLCIK ME TO SEE SOME EFFECT'S</button>
+            <div class="box" style="height: 300px;">
+                <div id="img1" class="box-1" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;">
+                    <img src="Images/WatchT2.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="100%" width="100%" alt="Pilot Watch" title="Pilot Watch">
+                </div>
+                <div id="content1" class="box-1" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <hr><center><h2>Pilot Watch</h2></center><hr><br>
+                        <div>WatchTime constantly publishes pilots’ watches news, pilot watches blog posts, pilot watch updates and other posts about popular       pilots watches as well as wilots’ watch infos.
+                        </div><br>
+                        <div>
+                            Pilots watches are available globally and WatchTime covers many best pilot watches and outstanding pilot watch models from many price ranges: Breitling pilot watches, IWC pilot watch models, Bell & Ross pilots watches and pilot watch editions from Citizen, Hamilton and other pilot watch brands. Make sure to go to our pilot watch database where we have dozens of new top 10 pilot watches including men’s pilot watches, women’s pilot watches and watch prices.
+                        </div>
+                </div>
+            </div>
+            <div class="box" style="height: 300px;">
+                <div id="content2" class="box-1" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;">
+                    <hr><center><h2>Rectangular Watch</h2></center><hr><br>
+                    <div>
+                        In my modest collection of watches, there is not a single one with a rectangular case; the only non-round one is the octagonal Audemars Piguet Royal Oak Extra-Thin. Nevertheless, since rectangular-case watches do have their fans, this week’s Fratello Friday focuses on the top five I would wear… if I did indeed wear them.
+                    </div><br>
+                    <div>
+                        My issue with rectangular watches is that I find them just a bit too “classical” for my taste. A watch with this type of design doesn’t usually suit me, especially if I am wearing short sleeves, such as a polo shirt, as I often do. The strange thing is, when I see myself in the mirror wearing a rectangular watch, I usually do like how it looks, but when I look back at my wrist, I’d rather take the watch off as quickly as possible.
+                    </div>
+                </div>
+                <div id="img2" class="box-1" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <img src="Images/WatchT3.jpeg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="100%" width="100%" alt="Pilot Watch" title="Rectangular Watch">
+                </div>
+            </div>
+            <div class="box" style="height: 300px;">
+                <div id="img3" class="box-1" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;margin-top: 15px;">
+                    <img src="Images/WatchT4.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="100%" width="100%" alt="Chronograph Watch" title="Chronograph Watch">
+                </div>
+                <div id="content3" class="box-1" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <hr><center><h2>Chronograph Watch</h2></center><hr><br>
+                        <div>Top chronograph watches remain incredibly popular, even if most of us don’t even use their signature chronograph watch functions. I am no exception; along with GMT/UTC functions, chronographs are one of my favorite complications.
+                        </div><br>
+                        <div>
+                            All watches are relatively new, either from 2013 or 2014; I have added 2015 watches already and will do so again soon as the list will be updated throughout the year. The top 20 chronograph watches are listed in alphabetical order and prices aren’t taken into account. While these are my personal choices for the top chrono watches at the moment, there are certainly other interesting chronographs worth mentioning. Please feel free to comment with your own choices for best chronographs and top chronograph watches. Also, some of the chronograph models shown here are available with other dials and/or bracelets and straps.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function bigImg(x) {
+              x.style.height = "100%";
+              x.style.width = "100%";
+              x.style.marginTop = "0px";
+            }
+            
+            function normalImg(x) {
+              x.style.height = "90%";
+              x.style.width = "90%";
+              x.style.marginTop = "20px";
+            }
+        </script>
+    </body>
+</html>

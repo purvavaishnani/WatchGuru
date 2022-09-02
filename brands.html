@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WatchGuru</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="background-color: #D3CCE3;">
+        <div id="container">
+            <div id="header" style="height: 150px;background-color:#3C3B3F;">
+                <div id="heading_div">
+                    <div style="width: 250px;float: left">
+                        <span style="font-size: 50px">WatchGuru</span><br>
+                        <i>"Everything About Wrist Watches"</i>
+                        <div id="line"></div>
+                    </div>
+                        
+                    <span id="pageHeader">MUST-KNOWN LUXURY WATCH BRANDS</span>
+                    <a href="menu.html" style="position: fixed;top: 5%;right: 4%;font-size: 40px;color:white;text-decoration: none;z-index: +11;" title="Close">&cross;</a>
+                </div>
+            </div>
+            <button id="BtnMinus" class="btn btn-warning" style="height: 50px;width: 100%;color: black"><b>Click Me To Reduce Image Size (-)</b></button>
+            <div class="box" style="height: 350px;">
+                <div class="box-1 imgBrands" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;">
+                    <img src="Images/WatchB1.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="90%" width="90%" alt="Rolex Watch" title="Rolex Watch" style="margin-top: 20px;">
+                </div>
+                <div class="box-1" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <hr><center><h1>Rolex</h1></center><hr><br>
+                        <div>Rolex is one of the world’s largest luxury watch brands. Rolex was founded in 1905 in London by Hans Wilsdorf, eventually Rolex moved to Switzerland in 1919. The Tudor watch brand is a subsidiary of Rolex. In 1914 Rolex obtained a chronometer certificate (Class A precision certificate) and thus became the first manufacturer of a chronometer wristwatch.
+                        </div><br>
+                        <div>
+                            Rolex is the timekeeper of Wimbledon and many other prestigious sports events. Explorers, aviators, military groups, celebrities and royals regularly purchase Rolex watches. Fake Rolex watches and Rolex replica watches are sought after by bargain hunters but can easily identified by Rolex serial numbers and by comparing the fake prices with the original Rolex prices on the internet and the Rolex price list in every brand boutique.
+                        </div>
+                </div>
+            </div>
+            <div class="box" style="height: 300px;">
+                <div class="box-1" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;">
+                    <hr><center><h1>Hubolt</h1></center><hr><br>
+                    <div>
+                        Hublot is a leading watch brand from Switzerland, founded in 1980. Hublot’s a part of the luxury group LVMH (TAG Heuer, Bulgari, Zenith, Louis Vuitton). Since Jean-Claude Biver became CEO in 2004 Hublot’s success grew rapidly. Hublot has sponsored a number of large sport and celebrity events, has created watch collections in collaborations with VIPs and employed intense marketing to communicate its brand and models.
+                    </div><br>
+                </div>
+                <div class="box-1 imgBrands" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <img src="Images/WatchB2.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="100%" width="100%" alt="Hubolt Watch" title="Hubolt Watch">
+                </div>
+            </div>
+            <div class="box" style="height: 300px;">
+                <div class="box-1 imgBrands" style="width: 660px;position: relative;height: 100%;float: left;margin-right: 5px;">
+                    <img src="Images/WatchB3.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" height="100%" width="100%" alt="Casio Watch" title="Casio Watch">
+                </div>
+                <div class="box-1" style="width: 650px;position: relative;height: 100%;float: left;">
+                    <hr><center><h1>Casio</h1></center><hr><br>
+                        <div>Casio is a watch and electronics company based in Japan. Casio was founded in 1946 by the engineer Tadao Kashio. Famous for its sturdy and functional calculators Casio soon started producing watches, among them the extremely popular Casio calculator watch.
+                        </div><br>
+                        <div>
+                            In 1983 the first Casio G-Shock watch hit market. In 1999 Casio sold the first GPS sensor watch, in 2000 Casio released the world’s first wrist watch with a camera, laying the foundation for smart watches. Since 200 Casio also produces small radio controlled solar powered watches. Today the most successful Casio brand is G-Shock with prices up to $1,000 or more for the high-end G-Shock models. Among the most requested watches are the Casio pathfinder, Casio edifice.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function bigImg(x) {
+              x.style.height = "100%";
+              x.style.width = "100%";
+              x.style.marginTop = "0px";
+            }
+            
+            function normalImg(x) {
+              x.style.height = "90%";
+              x.style.width = "90%";
+              x.style.marginTop = "20px";
+            }
+            $("#BtnMinus").click(function () {
+                var MDH = parseInt($(".imgBrands").css("height"));
+                var MDW = parseInt($(".imgBrands").css("width"));
+                if (MDH >= 20) {
+                    MDH -= 10;
+                    MDW -= 10;
+                    $(".imgBrands").css('height', MDH);
+                    $(".imgBrands").css('width', MDW);
+                }
+                else {
+                    alert("Sorry, It's Minimum Dimensions...You Can't Decrease More..");
+                }
+            });
+        </script>
+    </body>
+</html>

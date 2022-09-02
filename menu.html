@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WatchGuru</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #row{
+                padding-top: 190px;
+                padding-left: 20px;
+            }
+            #row ul li{
+                list-style-type: none;
+                font-size: xx-large; 
+                margin-bottom:10px; 
+                color:#E5E5BE;
+                font-family: Goudy Old Style;
+            }
+            #row ul li a{
+                color:#E5E5BE;
+                font-weight: bold;
+                font-size: 25px;
+                text-decoration: none;
+                font-family: mentorsans;
+                }
+            #row ul li a:hover{
+                color:#cc5333;
+                border-bottom:3px #40E0D0 solid;
+                }
+            #row span a{
+                padding-left: 70px;
+                font-size: 30px;
+                left: 50%;
+            }
+            #listHeader1, #listHeader2 {
+                border-bottom:1px #EDDE5D solid;
+                list-style-type: none;
+                font-size: xx-large; 
+                margin-bottom:10px; 
+                color:#E5E5BE;
+                font-family: Goudy Old Style;
+            }
+            #listHeader1:hover, #listHeader2:hover{
+                color:#F09819;
+                border-bottom:5px #EDDE5D solid;
+                border-top:5px #EDDE5D solid;
+                border-left:5px #EDDE5D solid;
+                border-right:5px #EDDE5D solid;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+              $("#listHeader1").click(function(){
+                $("#part1").toggle(3000);
+              });
+              $("#listHeader2").click(function(){
+                $("#part2").toggle(3000);
+              });
+            });
+        </script>
+    </head>
+    <body style="background-image: url('Images/img11.jpg'); background-repeat:no-repeat;background-size: 100% 660px">
+            <div id="header">
+                <div id="heading_div" style="color: white;position: absolute;left: 5%;top: 30px; font-family :-webkit-pictograph;">
+                    <span style="font-size: 50px">WatchGuru</span><br>
+                    <i>"Everything About Wrist Watches"</i>
+                    <div id="line"></div>
+                </div>
+            </div>
+            <a href="index.html" style="position: fixed;top: 5%;right: 4%;font-size: 40px;color:white;text-decoration: none;" title="Close">&cross;</a>
+            <div id="row" style="margin-top: 5%;">
+                <center>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <ul style="margin-top: 50px;">
+                        <button id="listHeader1" style="background-color: transparent;width: 400px;" title="TOGGLE ME">COMPANY'S PROFILE</button>
+                        <div id="part1">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="aboutus.html">ABOUT US</a></li>
+                            <li><a href="signup.html">SIGN UP</a></li>
+                            <li><a href="contactus.html">CONTACT US</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <ul style="margin-top: 50px;">
+                        <button id="listHeader2" style="background-color: transparent;width: 300px;"  title="TOGGLE ME">PRODUCTS</button>
+                        <div id="part2">
+                            <li><a href="watchtypes.html">TYPES OF WATCHES</a></li>
+                            <li><a href="brands.html">BRANDS</a></li>
+                            <li><a href="review.html">WATCH REVIEWS</a></li>
+                        </div>
+                    </ul>
+                </div>
+                </center>
+            </div>
+    </body>
+</html>

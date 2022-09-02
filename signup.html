@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WatchGuru</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+         <style type="text/css">
+        	span{
+                color:#feecb4;
+                font-weight: bold;
+             }
+        	#MySignUpForm{
+                width: 350px;
+                padding:20px;
+                padding-top:20px;
+                padding-left: 10px;
+                margin-top:80px;
+                margin-bottom:10px;
+                margin-left:50px;
+                box-shadow:0px 0px 90px #feecb4;
+                background-color: transparent;
+             }
+             input{
+                 width: 250px;
+             }
+        </style>
+        <script type="text/javascript">
+        function checkValidation(){
+            if($("#TxtSUFName").val() == ""){
+                alert("Please Enter the first Name.");
+               }
+            else if($("#TxtSULName").val() == ""){
+                alert("Please Enter the Last Name.");
+               }
+            else if($("#EmailId").val() == ""){
+                alert("Please Enter the Email ID.");
+               }
+            else if($("#TxtSUPassword").val() == ""){
+                alert("Please Enter the Password.");
+               }
+            else if($("#TxtSUConNo").val() == ""){
+                alert("Please Enter the Contact No.");
+               }
+            else{
+                confirm("Are you Sure You Want to Submit.");
+                alert("Thank You For Registering...!!!");
+            }
+        }
+        $(document).ready(function(){
+            $("#AgeRangeSlider").slider({
+                orientation:"horizontal",
+                min:1,
+                max:100,
+                value: 18,
+                slide: function(event, ui){
+                    $("#AgeValue").val(ui.value);
+                }
+            });
+          });
+      </script>
+    </head>
+    <body style="background-image: url('Images/img14.jpg'); background-repeat:no-repeat;background-size: 100% 660px">
+        <div class="container">
+            <div class="row">
+            <a href="menu.html" style="position: fixed;top: 5%;right: 4%;font-size: 40px;color:white;text-decoration: none;" title="Close">&cross;</a>
+            <div class="row">
+                    <div id="MySignUpForm" style="padding-top: 20px;">
+                        <center><form>
+                           <h2 style="color:#feecb4;font-family:sans-serif;"><i>REGISTER HERE</i></h2>
+                            <div class="form-group">
+                                <span>First Name</span><br>
+                                <input type="text" required placeholder="Enter your Firstname here.." id="TxtSUFName">
+                            </div>
+                            <div class="form-group">
+                                <span>Last Name</span><br>
+                                <input type="text" required id="TxtSULName" placeholder="Enter your Lastname here..">
+                            </div>
+                            <div class="form-group">
+                                <span>Email Id</span><br>
+                                <input type="email" required placeholder="Enter your Email id here.." id="EmailId"><br>
+                            </div>
+                            <div class="form-group">
+                                <span>Password</span><br>
+                                <input type="password" required id="TxtSUPassword" placeholder="Enter your Password here..">
+                            </div>
+                            <div class="form-group">
+                                <span>Mobile No.</span><br>
+                                <input type="number" required id="TxtSUConNo" placeholder="Enter your Mobile no. here..">
+                            </div>
+                            <div class="form-group">
+                                <span for="AgeValue">Enter Your Age:</span>
+                                <input type="text" required id="AgeValue" placeholder="Drag Slider to Adjust Age." disabled="true">
+                            </div>
+                            <div id="AgeRangeSlider"></div><br>
+                            <div class="form-group">
+                                   <button type="submit" id="submitbtn" onclick="checkValidation()" class="btn info" style="color:gray;">Sign Up</button>
+                            </div>
+                            </form>
+                            </center>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

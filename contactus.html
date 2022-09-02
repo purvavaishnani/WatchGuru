@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #row2col2{
+            margin-top: 30px;
+        }
+        #contactForm input{
+            width: 30%;
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#formImg").dblclick(function(){
+                $("#initialContent").hide();
+                $("#contactForm").css("visibility","visible");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="row2" style="background-image:linear-gradient(#2b5876,#4e4376);height: 657px;color:white;">
+            <a href="menu.html" style="position: fixed;top: 5%;right: 4%;font-size: 40px;color:black;text-decoration: none;z-index: +11;" title="Close">&cross;</a>
+            <div>
+                <img src="Images/img10.jpg" height="40%" width="100%" z-index="-11" position="absolute" >
+            </div>
+            <div id="initialContent" style="float: left;width: 70%;">
+                <h1 style="margin-left: 20px;font-family: mentorsans;">Get In Touch</h1><br>
+                <img id="formImg" src="Images/img111.jpg" title="Double Click Me To Get Contact Form" height="80px" width="80px" style="margin-left: 20px;left: 0px;"><br>
+                <label style="color: red;margin-left: 20px;">* Double Click To Get The Contact Form.</label>
+            </div>
+            <div id="contactForm" style="float: left;width: 70%;visibility: hidden">
+                <form>
+                    <h1 style="margin-left: 20px;font-family: mentorsans;">Get In Touch</h1>
+                    <h4 style="margin-left: 20px;font-family: mentorsans;"><u>Please fill out this quick form and we will be in touch with lightening speed. </u></h4>
+                    <label style="margin-left: 20px;">Name</label><br>
+                    <input id="userName" type="text" required name="name" placeholder="Please Enter Your Name Here..." style="color: black"><br>
+                    <label style="width: 60%;margin-left: 20px;">Email ID</label><br>
+                    <input id="emailId" type="email" required name="email" placeholder="Please Enter Your Email ID Here..." style="color: black" ><br>
+                    <label style="width: 60%;margin-left: 20px;top: 0;">Message</label><br>
+                    <textarea id="userMessage" name="message" required placeholder="Please Enter Your Message Here..." style="width: 30%;margin-left: 20px;color: black;"></textarea><br>
+                    <button type="submit" id="submitbtn" onclick="checkContactForm()" class=" btn btn-warning" style="color:black;margin-left: 13%;">Submit</button>
+                </form>
+            </div>
+
+            <div id="row2col2">
+                <p>
+                <b>Connect with us</b><br/>
+                For support or any questions<br/>
+                Email us at support@watchguru.com<br/><br/>
+                <b>Pixpa USA</b><br/>
+                George Stree 1 <br/>
+                NYC-361345<br/><br/>
+                <b>Pixpa India</b><br/>
+                B-222,First Floor<br/>
+                Okhla Industrial Area,Phase 1<br/>
+                New Delhi IN-1100200<br/>
+                </p>
+            </div>
+        </div>			
+	</div>	
+    <script>
+        function checkContactForm(){
+            if($("#userName").val() == ""){
+                alert("Please Enter the Name.");
+               }
+            else if($("#emailId").val() == ""){
+                alert("Please Enter the Email ID.");
+               }
+            else if($("#userMessage").val() == ""){
+                alert("Please Enter the Message.");
+               }
+            else{
+                confirm("Send Your Contact Details For Further Processing...");
+                alert("Thank You For Contacting US.");
+            }
+        }
+    </script>
+</body>
+</html>
